@@ -8,7 +8,8 @@ public class ChatServer {
     public static final ClientHandler[] clients = new ClientHandler[MAX_CLIENTS];
 
     public void go(int port){
-        try (ServerSocket serverSocket = new ServerSocket(port)) {
+        try{
+            ServerSocket serverSocket = new ServerSocket(port);
             System.out.println("Connection established on port "+port);
             System.out.println("Waiting for clients...");
 
