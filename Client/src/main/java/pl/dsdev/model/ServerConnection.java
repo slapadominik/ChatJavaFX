@@ -33,7 +33,6 @@ public class ServerConnection {
         while (true){
             try {
                 String name = in.readLine();
-                System.out.println(name);
                 if (name.equals("/endgetusers")){
                     break;
                 }

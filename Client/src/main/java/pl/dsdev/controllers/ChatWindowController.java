@@ -77,7 +77,7 @@ public class ChatWindowController {
     public void disconnectAction(){
         if (serverConnection.isConnected()) {
             serverConnection.disconnect();
-            chatTextArea.appendText("***CHAT: DISCONNECTED FROM THE SERVER!***");
+            chatTextArea.appendText("***CHAT: DISCONNECTED FROM THE SERVER!*** \n");
         }
     }
 

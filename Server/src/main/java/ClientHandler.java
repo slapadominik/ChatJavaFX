@@ -26,12 +26,12 @@ public class ClientHandler extends Thread {
             out = new PrintWriter(socket.getOutputStream(), true); //PrintWriter is autoflushing every time the println() method is invoked
 
             String myName = in.readLine();
-            System.out.println(myName);
             names.add(myName);
             for (String person: names){
                 out.println(person);
             }
             out.println("/endgetusers");
+            System.out.println(myName+" joined the chat room.");
 
             out.println("Welcome "+myName+" to the best chat room ever!\n");
             synchronized (this) {
@@ -44,7 +44,6 @@ public class ClientHandler extends Thread {
 
             while (true){
                 String inputLine = in.readLine();
-                System.out.println(inputLine);
                 if (inputLine.startsWith("/quit")){
                     synchronized (this) {
                         for (int i = 0; i < threads.length; i++) {

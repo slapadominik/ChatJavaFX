@@ -11,9 +11,9 @@ public class ChatServer {
     public static final ClientHandler[] clients = new ClientHandler[MAX_CLIENTS];
     public static final List<String> names = new ArrayList<>();
 
-    public void go(int port){
+    public void go(int port, String ipAdress){
         try{
-            InetAddress ip = InetAddress.getByName("25.52.81.79");
+            InetAddress ip = InetAddress.getByName(ipAdress);
             ServerSocket serverSocket = new ServerSocket(port, 50, ip);
             System.out.println("Connection established on port "+port);
             System.out.println("Waiting for clients...");
@@ -24,7 +24,6 @@ public class ChatServer {
                     if (clients[i]==null){
                         ClientHandler clientHandler = new ClientHandler(clientSocket, clients, names);
                         clients[i] = clientHandler;
-                        System.out.println("Added new client!");
                         clientHandler.start();
                         break;
                     }
