@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Lato';
+    src: url('Lato-Regular.ttf');
+}
+
+.label {
+    -fx-text-fill: black;
+    -fx-font-family: "Lato";
+    -fx-font-size: 12px;
+
+}
+.text-area .content {
+    -fx-background-image: url("uszibackclear.png");
+}
+
+.text-area {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-border-color: #4479BA;
+    -fx-border-width: 1px;
+    -fx-font-family: "Lato";
+}
+
+.button {
+    -fx-font-family: "Lato";
+    -fx-background-color: #4479BA;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-background-radius: 2 2;
+
+}
+.button:hover, .button-link:focused {
+    -fx-background-color: #356094;
+}
+
+.button:pressed {
+    -fx-background-color:#2E5481;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 5, 0, 0, 0);
+
+}
+
+.text-field {
+    -fx-border-color: #4479BA;
+    -fx-border-width: 1;
+    -fx-font-family: "Lato";
+    -fx-font-size: 12px;
+}
+
+.split-pane *.split-pane-divider {
+    -fx-padding: 0 1 0 1;
+}
+#userInput{
+    -fx-font-size: 15px;
+}

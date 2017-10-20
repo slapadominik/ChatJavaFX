@@ -6,12 +6,16 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.net.URL;
+
 public class ChatClientApp extends Application{
 
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/chatWindow.fxml"));
         primaryStage.setTitle("ChatRoom");
-        primaryStage.setScene(new Scene(root));
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add("styles/test.css");
+        primaryStage.setScene(scene);
         primaryStage.show();
     }
 

@@ -11,17 +11,15 @@ public class ServerReader implements Runnable{
 
     private BufferedReader in;
     private TextArea chatArea;
-    private ListView<String> listView;
     private String userName;
     private ServerConnection serverConnection;
 
 
-    public ServerReader(ServerConnection serverConnection, TextArea chatAream, ListView<String> listView, String userName){
+    public ServerReader(ServerConnection serverConnection, TextArea chatAream, String userName){
         this.serverConnection=serverConnection;
         this.in=serverConnection.getIn();
         this.chatArea=chatAream;
         this.userName=userName;
-        this.listView=listView;
     }
 
     public void run() {

@@ -1,7 +1,5 @@
 package pl.dsdev.controllers;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
@@ -10,6 +8,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import pl.dsdev.model.ServerConnection;
 import pl.dsdev.model.ServerReader;
+import pl.dsdev.view.DialogUtils;
 
 
 public class ChatWindowController {
@@ -35,7 +34,7 @@ public class ChatWindowController {
 
     @FXML
     public void initialize(){
-        chatTextArea.setEditable(false);
+        userInputTextField.setId("userInput");
     }
 
 
@@ -66,7 +65,7 @@ public class ChatWindowController {
 
             chatTextArea.appendText(serverConnection.getWelcomeMsg());
 
-            ServerReader serverReader = new ServerReader(serverConnection, chatTextArea, listView, username);
+            ServerReader serverReader = new ServerReader(serverConnection, chatTextArea, username);
             Thread readingThread = new Thread(serverReader);
             readingThread.start();
 
@@ -94,5 +93,10 @@ public class ChatWindowController {
         if (keyEvent.getCode().equals(KeyCode.ENTER)){
             sendAction();
         }
+    }
+
+    @FXML
+    public void about(){
+        DialogUtils.dialogAboutApplication();
     }
 }

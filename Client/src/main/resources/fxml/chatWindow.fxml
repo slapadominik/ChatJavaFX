@@ -18,8 +18,9 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.dsdev.controllers.ChatWindowController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="520.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.dsdev.controllers.ChatWindowController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -35,26 +36,26 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Help">
             <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem mnemonicParsing="false" onAction="#about" text="About" />
             </items>
           </Menu>
         </menus>
       </MenuBar>
    </top>
    <center>
-      <TextArea fx:id="chatTextArea" prefHeight="353.0" prefWidth="435.0" BorderPane.alignment="CENTER" />
+      <TextArea fx:id="chatTextArea" editable="false" prefHeight="426.0" prefWidth="485.0" BorderPane.alignment="CENTER" />
    </center>
    <right>
       <TabPane prefHeight="344.0" prefWidth="165.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
         <tabs>
           <Tab text="Connect">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="315.0" prefWidth="132.0">
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="431.0" prefWidth="177.0">
                      <children>
                         <GridPane layoutX="11.0" layoutY="24.0" prefHeight="181.0" prefWidth="152.0">
                           <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="67.0" minWidth="10.0" prefWidth="60.0" />
-                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="108.0" minWidth="10.0" prefWidth="84.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="76.0" minWidth="10.0" prefWidth="73.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="108.0" minWidth="10.0" prefWidth="79.0" />
                           </columnConstraints>
                           <rowConstraints>
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -72,7 +73,7 @@
                               <Button mnemonicParsing="false" onAction="#connectAction" text="Connect" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                            </children>
                         </GridPane>
-                        <HBox alignment="BOTTOM_RIGHT" layoutY="236.0" prefHeight="181.0" prefWidth="164.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="236.0">
+                        <HBox alignment="BOTTOM_RIGHT" layoutX="1.0" layoutY="243.0" prefHeight="189.0" prefWidth="143.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="243.0">
                            <children>
                               <Button alignment="CENTER" mnemonicParsing="false" onAction="#disconnectAction" text="Disconnect" />
                            </children>
@@ -94,11 +95,11 @@
       </TabPane>
    </right>
    <bottom>
-      <SplitPane dividerPositions="0.21237458193979933" prefHeight="29.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <SplitPane dividerPositions="0.16049382716049382" prefHeight="35.0" prefWidth="650.0" BorderPane.alignment="CENTER">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <Button layoutY="1.0" lineSpacing="6.0" minHeight="-Infinity" minWidth="20.0" mnemonicParsing="false" onAction="#sendAction" onKeyPressed="#sendButtonEnterPressed" prefHeight="25.0" prefWidth="125.0" text="Send" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <Button layoutY="9.0" lineSpacing="6.0" mnemonicParsing="false" onAction="#sendAction" onKeyPressed="#sendButtonEnterPressed" text="Send" wrapText="true" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
                      <cursor>
                         <Cursor fx:constant="DEFAULT" />
                      </cursor>
@@ -107,7 +108,10 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <TextField fx:id="userInputTextField" layoutX="-1.0" layoutY="-2.0" onKeyPressed="#sendMsgEnterPressed" prefHeight="33.0" prefWidth="470.0" promptText="Text here,,," AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <TextField fx:id="userInputTextField" layoutX="3.0" layoutY="1.0" onKeyPressed="#sendMsgEnterPressed" prefWidth="503.0" promptText="Text here..." AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font></TextField>
                </children>
             </AnchorPane>
         </items>

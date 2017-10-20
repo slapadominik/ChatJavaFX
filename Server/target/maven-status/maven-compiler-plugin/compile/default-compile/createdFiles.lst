@@ -1,4 +1,3 @@
-ClientHandler.class
-ChatServer.class
-Main.class
-Test.class
+pl\dsdev\server\Main.class
+pl\dsdev\server\ChatServer.class
+pl\dsdev\server\ClientHandler.class
