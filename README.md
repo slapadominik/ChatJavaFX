@@ -1,8 +1,36 @@
-# ChatJavaFX## This is multithreaded chat application made in client-server architecture and TCP/IP protocol. It is written in Java. 
+# Project Title
 
-## Installing
+One Paragraph of project description goes here
 
- install JDK (Java Development Kit) from http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.htmlset PATH and JAVA_HOME enviromental variable (eg. PATH = C:\Program Files\Java\jdk1.8.0_121\bin, JAVA_HOME = C:\Program Files\Java\jdk1.8.0_121)download Maven binary.zip archive from https://maven.apache.org/download.cgiunzip Maven to any directory on your computer, then set for it enviromental variable PATH (PATH="C:\Users\Me\Desktop\Maven\bin)open command line (to open it on Windows press Windows Key+R and write "cmd")switch to the directory where you have downloaded ChatJavaFXswitch to Client directory and write "mvn clean install"switch to Client/target directory and open ChatClientGUI-1.0-SNAPSHOT.jarto open run the Server, switch to Server directory and also write "mvn clean package"switch to Server/target directory and write "java -jar ChatServer-1.0-SNAPSHOT.jar"
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+What things you need to install the software and how to install them
+
+```
+Give examples
+```
+
+### Installing
+
+A step by step series of examples that tell you have to get a development env running
+
+Say what the step will be
+
+```
+Give the example
+```
+
+And repeat
+
+```
+until finished
+```
+
+End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
