@@ -1,3 +1,5 @@
+ChatJavaFX
+
 This is multithreaded chat application made in client-server architecture and TCP/IP protocol. It is written in Java. Project is being developed in the repository:
 https://github.com/Donios/ChatJavaFX
 Author: Dominik Slapa, Released: 2017 
