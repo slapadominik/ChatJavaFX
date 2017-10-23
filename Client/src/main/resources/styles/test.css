@@ -9,9 +9,6 @@
     -fx-font-size: 12px;
 
 }
-.text-area .content {
-    -fx-background-image: url("uszibackclear.png");
-}
 
 .text-area {
     -fx-font-size: 15px;
