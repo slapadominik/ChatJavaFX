@@ -1,6 +1,4 @@
-# Project Title
-
-One Paragraph of project description goes here
+# Project TitleThis is multithreaded chat application made in client-server architecture and TCP/IP protocol.
 
 ## Getting Started
 
