@@ -1,0 +1,7 @@
+pl\dsdev\model\ServerReader.class
+pl\dsdev\controllers\ChatWindowController.class
+pl\dsdev\view\DialogUtils.class
+pl\dsdev\model\ServerReader$1.class
+pl\dsdev\model\ServerConnection.class
+pl\dsdev\model\ServerReader$2.class
+pl\dsdev\ChatClientApp.class
