@@ -1,4 +1,4 @@
-# ChatJavaFXThis is multithreaded chat application made in client-server architecture and TCP/IP protocol. It is written in Java. 
+# ChatJavaFX###This is multithreaded chat application made in client-server architecture and TCP/IP protocol. It is written in Java. 
 
 ## Installing
 
