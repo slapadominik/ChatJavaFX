@@ -14,6 +14,7 @@ Instructions to run the project:
 - switch to the directory where you have downloaded ChatJavaFX
 - switch to Client directory and write "mvn clean install"
 - switch to Client/target directory and open ChatClientGUI-1.0-SNAPSHOT.jar
-- to open run the Server, switch to Server directory and also write "mvn clean package"
-- switch to Server/target directory and write "java -jar ChatServer-1.0-SNAPSHOT.jar"
+- to open run the Server, switch to Server directory and also write "mvn clean install"
+- switch to Server/target directory and write "java -jar ChatServer-1.0-SNAPSHOT.jar" with IP-ADRESS=127.0.0.1 and default PORT=80 or you can provide arguments like this 
+"java -jar ChatServer-1.0-SNAPSHOT.jar [IP-ADRESS] [PORT]", to run the Server on your local machine and choose PORT number on your own
  
